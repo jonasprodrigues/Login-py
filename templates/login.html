@@ -3,19 +3,36 @@
 <head>
     <title>Login</title>
 </head>
-<body style="font-family: Arial; text-align:center; margin-top:100px;">
+<body style="text-align:center; margin-top:100px; font-family: Arial;">
 
-    <h2>Login</h2>
+<h2>Login</h2>
 
-    {% if erro %}
-        <p style="color:red;">{{ erro }}</p>
-    {% endif %}
+{% if erro %}
+<p style="color:red;">{{ erro }}</p>
+{% endif %}
 
-    <form method="POST">
-        <input type="text" name="usuario" placeholder="Usuário"><br><br>
-        <input type="password" name="senha" placeholder="Senha"><br><br>
-        <button type="submit">Entrar</button>
-    </form>
+<form method="POST">
+    <input name="usuario" placeholder="Usuário"><br><br>
+    <input name="senha" type="password" placeholder="Senha"><br><br>
+    <button>Entrar</button>
+</form>
+
+<br>
+
+<!-- criar conta -->
+<a href="/register">Criar conta</a>
+
+<br><br>
+
+<!-- esqueci senha -->
+<a href="/forgot">Esqueci minha senha</a>
+
+<br><br>
+
+<!-- dica admin -->
+<p style="font-size:12px;color:gray;">
+Admin padrão: admin / 123
+</p>
 
 </body>
 </html>
